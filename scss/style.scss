@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url("../src/museum.jpg");
+    background-size: cover;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    .content {
+        padding: 4rem;
+        background: rgba(12, 12, 12, 0.8);
+        color: hsl(0, 0%, 84%);
+        border-radius: 0.875rem;
+        text-align: center;
+        border: 1px solid #272727;
+        @media (max-width: 460px) {
+            padding: 2rem;
+          }
+    }
+    .btn-container {
+        display: flex;
+        gap: 0.875rem;
+        margin-bottom: 1.5rem;
+        @media (max-width: 560px) {
+            flex-direction: column;
+          }
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+
+.btn {
+    border: none;
+    padding: 1.125rem 2.125rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    border-radius: 0.875rem;
+    min-width: 12rem;
+    cursor: pointer;
+    &.btn-increment {
+        background-color: hsl(200, 91%, 37%);
+        &:hover {
+            background-color: hsl(200deg 93.33% 30.62%);
+        }
+    }
+    &.btn-save {
+        background-color: hsl(160, 87%, 24%);
+        &:hover {
+            background-color: hsl(160, 92%, 20%);
+        }
+    }
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.gray {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: hsla(0, 0%, 49%, 0.2);
+    z-index: 0;
+}
